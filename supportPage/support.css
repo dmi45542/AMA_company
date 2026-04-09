@@ -1,0 +1,164 @@
+/* Стили отдельной страницы поддержки */
+
+.page-support .support-shell {
+  padding: 22px 0 54px;
+}
+
+.page-support .topbar {
+  position: fixed;
+  top: 12px;
+  left: 14px;
+  right: 14px;
+  z-index: 50;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(20, 21, 23, 0.55);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+
+.page-support .topbar .wrap {
+  max-width: var(--container-narrow);
+}
+
+.page-support .topbarSpacer {
+  height: calc(var(--topbar-h) + 14px);
+}
+
+.page-support .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.page-support .brand {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.page-support .brand small {
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.page-support .support-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1.1fr 0.9fr;
+  margin-top: 18px;
+}
+
+.page-support .support-card {
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.22);
+}
+
+.page-support .support-card .inner {
+  padding: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.page-support .support-title {
+  font-size: clamp(26px, 3vw, 42px);
+  letter-spacing: -0.2px;
+}
+
+.page-support .support-lead {
+  opacity: 0.92;
+  max-width: 760px;
+}
+
+.page-support .support-list {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.page-support .support-list li {
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.page-support .support-list span {
+  display: block;
+  opacity: 0.75;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.page-support .support-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.page-support .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.page-support .btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(46, 125, 246, 0.56);
+  background: rgba(46, 125, 246, 0.12);
+}
+
+.page-support .btn.primary {
+  background: linear-gradient(135deg, rgba(191, 34, 51, 0.92), rgba(191, 34, 51, 0.60));
+  border-color: rgba(191, 34, 51, 0.55);
+  color: #fff;
+}
+
+.page-support .support-note {
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px dashed rgba(46, 125, 246, 0.42);
+  background: rgba(46, 125, 246, 0.08);
+  line-height: 1.6;
+}
+
+.page-support .support-footer {
+  margin-top: 18px;
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+@media (max-width: 920px) {
+  .page-support .support-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+html[data-theme="light"] .page-support .support-card {
+  border-color: rgba(10, 14, 20, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+html[data-theme="light"] .page-support .support-list li {
+  border-color: rgba(10, 14, 20, 0.10);
+  background: rgba(17, 19, 23, 0.03);
+}

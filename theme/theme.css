@@ -1,0 +1,29 @@
+/* Тема проекта */
+
+html[data-theme="dark"] body {
+  color: rgba(236, 239, 244, 0.90);
+  background: linear-gradient(180deg, var(--bg), var(--bg-2));
+}
+
+html[data-theme="dark"] .btn,
+html[data-theme="dark"] .panel a,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .modalPanel {
+  color: rgba(236, 239, 244, 0.92);
+}
+
+html[data-theme="light"] body {
+  color: rgba(17, 19, 23, 0.96);
+  background: linear-gradient(180deg, var(--paper), var(--paper-2));
+}
+
+html[data-theme="light"] body::after {
+  opacity: 0.62;
+}
+
+html[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(to right, rgba(46, 125, 246, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(46, 125, 246, 0.08) 1px, transparent 1px);
+  opacity: 0.28;
+}

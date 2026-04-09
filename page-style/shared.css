@@ -1,0 +1,176 @@
+/* Общие глобальные стили и утилиты проекта */
+
+html,
+body {
+  height: 100%;
+  scroll-padding-top: calc(var(--topbar-h) + 12px);
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 16.5px;
+  line-height: 1.55;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg), var(--bg-2));
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: -240px;
+  pointer-events: none;
+  z-index: -2;
+  background:
+    radial-gradient(1100px 660px at 72% 10%, rgba(46, 125, 246, 0.32) 0%, rgba(46, 125, 246, 0.20) 28%, rgba(46, 125, 246, 0.10) 52%, rgba(46, 125, 246, 0.04) 68%, transparent 92%),
+    radial-gradient(1020px 660px at 18% 18%, rgba(191, 34, 51, 0.28) 0%, rgba(191, 34, 51, 0.18) 30%, rgba(191, 34, 51, 0.10) 54%, rgba(191, 34, 51, 0.04) 70%, transparent 93%);
+  filter: blur(120px);
+  opacity: 0.95;
+  transform: translateZ(0);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.55;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(980px 760px at 50% 0%, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.62) 34%, rgba(0, 0, 0, 0.30) 58%, transparent 86%);
+}
+
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.wrap--narrow {
+  max-width: var(--container-narrow);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.u-flex-between-center-gap-10 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.u-text-strong-wide {
+  font-weight: 900;
+  letter-spacing: 0.3px;
+}
+
+.u-stack-auto-gap-10 {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.u-actions-mt-14 {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.u-title-sm-strong {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.u-card-gap-block {
+  margin: 14px 0 16px;
+}
+
+.u-text-readable {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.u-tracking-sm {
+  letter-spacing: 0.2px;
+}
+
+.u-row-gap-wrap {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.u-hint-mt-10 {
+  margin: 10px 0 0;
+}
+
+.u-list-compact {
+  padding: 0;
+  gap: 10px;
+}
+
+.u-note-danger {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px dashed rgba(191, 34, 51, 0.55);
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.u-note-text {
+  margin-top: 6px;
+  color: rgba(185, 192, 204, 0.95);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.u-row-gap-wrap-center {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.u-text-muted-block {
+  margin-top: 12px;
+  color: rgba(185, 192, 204, 0.95);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.u-note-info {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(46, 125, 246, 0.25);
+  background: rgba(46, 125, 246, 0.06);
+}
+
+.u-text-blue-strong {
+  font-weight: 800;
+  color: rgba(46, 125, 246, 0.95);
+}
+
+.u-footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
