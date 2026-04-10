@@ -1,164 +1,89 @@
-/* Стили отдельной страницы поддержки */
-
-.page-support .support-shell {
-  padding: 22px 0 54px;
-}
-
-.page-support .topbar {
-  position: fixed;
-  top: 12px;
-  left: 14px;
-  right: 14px;
-  z-index: 50;
-  overflow: hidden;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(20, 21, 23, 0.55);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
-}
-
-.page-support .topbar .wrap {
-  max-width: var(--container-narrow);
-}
-
-.page-support .topbarSpacer {
-  height: calc(var(--topbar-h) + 14px);
-}
-
-.page-support .nav {
+/* Форма обратной связи */
+.form {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 0;
-}
-
-.page-support .brand {
-  display: inline-flex;
   flex-direction: column;
-  gap: 2px;
-  font-weight: 900;
-  letter-spacing: 0.5px;
-}
-
-.page-support .brand small {
-  font-weight: 600;
-  opacity: 0.75;
-}
-
-.page-support .support-grid {
-  display: grid;
   gap: 18px;
-  grid-template-columns: 1.1fr 0.9fr;
-  margin-top: 18px;
 }
 
-.page-support .support-card {
-  overflow: hidden;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.22);
-}
-
-.page-support .support-card .inner {
-  padding: 22px;
-  display: grid;
-  gap: 14px;
-}
-
-.page-support .support-title {
-  font-size: clamp(26px, 3vw, 42px);
-  letter-spacing: -0.2px;
-}
-
-.page-support .support-lead {
-  opacity: 0.92;
-  max-width: 760px;
-}
-
-.page-support .support-list {
-  display: grid;
-  gap: 12px;
-  list-style: none;
-  padding: 0;
-}
-
-.page-support .support-list li {
-  padding: 14px 16px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.page-support .support-list span {
-  display: block;
-  opacity: 0.75;
-  font-size: 14px;
-  margin-top: 4px;
-}
-
-.page-support .support-actions {
+.form__group {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.page-support .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 42px;
-  padding: 11px 14px;
-  border-radius: 14px;
+.form__label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form__label::after {
+  content: " *";
+  color: var(--red, #BF2233);
+}
+
+.form__label__area {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.form__input {
+  padding: 12px 14px;
+  font-size: 14px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
   color: inherit;
-  cursor: pointer;
-  user-select: none;
-  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  outline: none;
+  transition: border-color 0.2s;
 }
 
-.page-support .btn:hover {
-  transform: translateY(-1px);
-  border-color: rgba(46, 125, 246, 0.56);
-  background: rgba(46, 125, 246, 0.12);
+.form__input:focus {
+  border-color: var(--blue, #2E7DF6);
 }
 
-.page-support .btn.primary {
-  background: linear-gradient(135deg, rgba(191, 34, 51, 0.92), rgba(191, 34, 51, 0.60));
-  border-color: rgba(191, 34, 51, 0.55);
-  color: #fff;
+.form__input:invalid:not(:placeholder-shown) {
+  border-color: var(--red, #BF2233);
 }
 
-.page-support .support-note {
-  padding: 16px;
-  border-radius: 18px;
-  border: 1px dashed rgba(46, 125, 246, 0.42);
-  background: rgba(46, 125, 246, 0.08);
-  line-height: 1.6;
+textarea.form__input {
+  min-height: 120px;
+  resize: vertical;
 }
 
-.page-support .support-footer {
-  margin-top: 18px;
+.form_description,
+.form__description {
   font-size: 12px;
-  opacity: 0.65;
+  opacity: 0.7;
+  margin-top: 2px;
 }
 
-@media (max-width: 920px) {
-  .page-support .support-grid {
-    grid-template-columns: 1fr;
+.form__button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--blue, #2E7DF6), #1a5bc4);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(46, 125, 246, 0.3);
+}
+
+/* Светлая тема для формы */
+html[data-theme="light"] .form__input {
+  border-color: rgba(0, 0, 0, 0.16);
+  background: rgba(0, 0, 0, 0.03);
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .form__button {
+    width: 100%;
   }
-}
-
-html[data-theme="light"] .page-support .support-card {
-  border-color: rgba(10, 14, 20, 0.08);
-  background: rgba(255, 255, 255, 0.82);
-}
-
-html[data-theme="light"] .page-support .support-list li {
-  border-color: rgba(10, 14, 20, 0.10);
-  background: rgba(17, 19, 23, 0.03);
 }

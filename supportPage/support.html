@@ -1,73 +1,159 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#1f2022" name="theme-color"/>
-<title>AMA — насосы нового поколения</title>
-<meta content="AMA — химические насосы: герметичные магнитные, центробежные, самовсасывающие решения для агрессивных сред." name="description"/>
-<meta content="https://ama-pump.ru/" property="og:url"/>
-<meta content="images/brand/logo.png" property="og:image"/>
-<!-- ЛОГО -->
-<link href="../images/brand/logo.png" rel="icon" type="image/png"/>
-<link href="../images/brand/logo.png" rel="apple-touch-icon"/>
-<script src="../js/core/theme-boot.js"></script>
-<script defer src="../js/core/theme.js"></script>
-<script defer src="../js/core/topbar.js"></script>
-<script defer src="../js/core/drawer.js"></script>
-<script defer src="../js/core/bubbles.js"></script>
-<script defer src="../js/data/ama-series.js"></script>
-<script defer src="../js/utils/request-form.js"></script>
-<script defer src="../js/pages/home.js"></script>
-<script defer src="../js/pages/series.js"></script>
-<script defer src="../js/pages/support.js"></script>
-<script defer src="../js/init.js"></script>
-<script src="../js/core/scroll-header.js"></script>
-<link href="../main.css" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#1f2022" name="theme-color" />
+  <title>AMA — насосы нового поколения</title>
+  <meta content="AMA — химические насосы: герметичные магнитные, центробежные, самовсасывающие решения для агрессивных сред." name="description" />
+  <meta content="https://ama-pump.ru/" property="og:url" />
+  <meta content="images/brand/logo.png" property="og:image" />
+  <!-- ЛОГО -->
+  <link href="../images/brand/logo.png" rel="icon" type="image/png" />
+  <link href="../images/brand/logo.png" rel="apple-touch-icon" />
+  <script src="../js/core/theme-boot.js"></script>
+  <script defer src="../js/core/theme.js"></script>
+  <script defer src="../js/core/topbar.js"></script>
+  <script defer src="../js/core/drawer.js"></script>
+  <script defer src="../js/core/bubbles.js"></script>
+  <script defer src="../js/data/ama-series.js"></script>
+  <script defer src="../js/utils/request-form.js"></script>
+  <script defer src="../js/pages/home.js"></script>
+  <script defer src="../js/pages/series.js"></script>
+  <script defer src="../js/pages/support.js"></script>
+  <script defer src="../js/init.js"></script>
+  <script src="../js/core/scroll-header.js"></script>
+  <link href="../main.css" rel="stylesheet" />
 </head>
 <body class="page-home">
-<header class="topbar site-header">
-<div class="wrap">
-<div class="nav">
-<div class="navRow navRow1">
-<a aria-label="AMA" class="brand" href="#top">
-<span class="brandText">AMA</span>
-<span class="brandSub">насосы нового поколения</span>
-</a>
-<div class="tools">
-<button aria-label="Переключить тему" class="btn icon theme-toggle" data-theme-toggle="" id="themeToggle" title="Переключить тему" type="button">
-<svg aria-hidden="true" class="ticon sun" viewbox="0 0 24 24">
-<circle cx="12" cy="12" r="4"></circle>
-<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
-</svg>
-<svg aria-hidden="true" class="ticon moon" viewbox="0 0 24 24">
-<path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z"></path>
-</svg>
-</button>
-<button aria-label="Открыть меню" class="btn hamb" id="openMenu" type="button">Меню</button>
-</div>
-</div>
-<nav aria-label="Навигация" class="navlinks">
-<div class="navItems">
-<a href="../index.html">О компании</a>
-<a href="../pages/seriesPage.html">Серии</a>
-<a href="../pages/serviceInfo.html">Сервис и ограничения</a>
-<a href="../pages/requestTitle.html">Запрос</a>
-<a href="../pages/contact.html">Контакты</a>
-<a href="supportPage/support.html">Поддержка</a></div>
-<div class="cta">
-<a class="btn" download="" href="docs/catalog.pdf">Скачать каталог</a>
-<a class="btn primary" href="#request">Подобрать насос</a>
-</div>
-</nav>
-</div>
-</div>
-</header>
+  <header class="topbar site-header">
+    <div class="wrap">
+      <div class="nav">
+        <div class="navRow navRow1">
+          <a aria-label="AMA" class="brand" href="#top">
+            <span class="brandText">AMA</span>
+            <span class="brandSub">насосы нового поколения</span>
+          </a>
+          <div class="tools">
+            <button aria-label="Переключить тему" class="btn icon theme-toggle" data-theme-toggle id="themeToggle" title="Переключить тему" type="button">
+              <svg aria-hidden="true" class="ticon sun" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+              </svg>
+              <svg aria-hidden="true" class="ticon moon" viewBox="0 0 24 24">
+                <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z"></path>
+              </svg>
+            </button>
+            <button aria-label="Открыть меню" class="btn hamb" id="openMenu" type="button">Меню</button>
+          </div>
+        </div>
+        <nav aria-label="Навигация" class="navlinks">
+          <div class="navItems">
+            <a href="../index.html">О компании</a>
+            <a href="../pages/seriesPage.html">Серии</a>
+            <a href="../pages/serviceInfo.html">Сервис и ограничения</a>
+            <a href="../pages/requestTitle.html">Запрос</a>
+            <a href="../pages/contact.html">Контакты</a>
+            <a href="supportPage/support.html">Поддержка</a>
+          </div>
+          <div class="cta">
+            <a class="btn" download href="docs/catalog.pdf">Скачать каталог</a>
+            <a class="btn primary" href="#request">Подобрать насос</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
   <div aria-hidden="true" class="topbarSpacer"></div>
 
   <main id="top">
+    <section class="form_sec">
+  <div class="wrap">
+    <div class="h2">
+      <div>
+        <h2>Форма обратной связи</h2>
+        <p>Заполните форму — мы ответим в ближайшее время.</p>
+      </div>
+      <span class="badge">support</span>
+    </div>
 
+    <div class="two">
+      <div class="card">
+        <div class="inner">
+          <form class="form" id="supportForm">
+            <div class="form__group">
+              <label for="name" class="form__label">Имя</label>
+              <input type="text" id="name" name="name" class="form__input" placeholder="Введите Ваше имя" required minlength="2" maxlength="50" />
+              <span class="form_description">Минимум 2 символа</span>
+            </div>
+
+            <div class="form__group">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" name="email" class="form__input" placeholder="Введите Ваш email" required />
+              <span class="form_description">Введите действительный email</span>
+            </div>
+
+            <div class="form__group">
+              <label for="phone" class="form__label">Телефон</label>
+              <input type="tel" id="phone" name="phone" class="form__input" placeholder="+7 (___) ___-__-__" />
+              <span class="form_description">Опционально</span>
+            </div>
+
+            <div class="form__group">
+              <label for="theme" class="form__label">Тема обращения</label>
+              <input type="text" id="theme" name="theme" class="form__input" placeholder="Введите тему обращения" required minlength="3" />
+              <span class="form_description">Например, "Вопрос по сайту/сервису"</span>
+            </div>
+
+            <div class="form__group">
+              <label for="message" class="form__label__area">Сообщение</label>
+              <textarea id="message" name="message" class="form__input" placeholder="Расскажите подробно о Вашем вопросе" rows="5" maxlength="1000"></textarea>
+              <span class="form__description">Опционально, до 1000 символов</span>
+            </div>
+
+            <button class="btn primary form__button" type="submit">Отправить сообщение</button>
+            <p class="hint" style="margin-top: 10px; font-size: 12px;">Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="inner">
+          <div class="cardTitle">
+            <h3>Как мы обрабатываем обращения</h3>
+            <span class="badge">инфо</span>
+          </div>
+          <ul class="list">
+            <li class="li">
+              <div aria-hidden="true" class="ico">📧</div>
+              <div>
+                <b>Ответ в течение 24 часов</b>
+                <span>Мы обрабатываем запросы в рабочее время.</span>
+              </div>
+            </li>
+            <li class="li">
+              <div aria-hidden="true" class="ico">🔧</div>
+              <div>
+                <b>Техническая поддержка</b>
+                <span>Поможем с подбором, эксплуатацией и сервисом.</span>
+              </div>
+            </li>
+            <li class="li">
+              <div aria-hidden="true" class="ico">📄</div>
+              <div>
+                <b>Коммерческое предложение</b>
+                <span>Подготовим КП за 1–2 дня по вашему запросу.</span>
+              </div>
+            </li>
+          </ul>
+          <div class="support-note" style="margin-top: 16px; padding: 14px; border-radius: 18px; border: 1px dashed rgba(46,125,246,0.42); background: rgba(46,125,246,0.06);">
+            <strong>📌 Важно:</strong> Если у вас срочный вопрос, позвоните нам по телефону <b>+7 (916) 548-13-35</b> или напишите на <b>pump@oooama.ru</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer>
@@ -81,22 +167,20 @@
     </div>
   </footer>
 
-  <!-- Мобильное меню drawer (ДОБАВЛЕНО ДЛЯ РАБОТЫ МЕНЮ) -->
+  <!-- Мобильное меню drawer -->
   <div aria-hidden="true" class="drawer" id="drawer">
     <div class="panel">
       <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
         <strong>Навигация</strong>
         <button aria-label="Закрыть меню" class="btn" id="closeMenu" type="button">Закрыть</button>
       </div>
-<a href="../index.html">О компании</a>
-<a href="../pages/seriesPage.html">Серии</a>
-<a href="../pages/serviceInfo.html">Сервис и ограничения</a>
-<a href="../pages/requestTitle.html">Запрос</a>
-<a href="../pages/contact.html">Контакты</a>
-<a href="../supportPage/support.html">Поддержка</a></div>
+      <a href="../index.html">О компании</a>
+      <a href="../pages/seriesPage.html">Серии</a>
+      <a href="../pages/serviceInfo.html">Сервис и ограничения</a>
+      <a href="../pages/requestTitle.html">Запрос</a>
+      <a href="../pages/contact.html">Контакты</a>
+      <a href="../supportPage/support.html">Поддержка</a>
     </div>
   </div>
-  <button aria-label="Открыть меню" class="navBubble" id="navBubble" type="button">☰</button>
-  <button aria-label="Наверх" class="upBubble" id="upBubble" type="button">↑</button>
 </body>
 </html>
