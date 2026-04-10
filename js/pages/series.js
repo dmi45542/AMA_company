@@ -1,5 +1,5 @@
 (function () {
-  "use strict";
+  "use strict"; 
 
   window.AMA = window.AMA || {};
 
@@ -19,9 +19,9 @@
     var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
     var panels = Array.prototype.slice.call(document.querySelectorAll(".tab-panel"));
 
-    function showTab(name) {
+    function showTab(name) { 
       tabs.forEach(function (tab) {
-        var isActive = tab.dataset.tab === name;
+        var isActive = tab.dataset.tab === name; 
         tab.classList.toggle("active", isActive);
         tab.setAttribute("aria-selected", String(isActive));
       });
@@ -33,16 +33,39 @@
       });
     }
 
+    // ========== НУЖНЫЙ КОД ==========
+    // Навешиваем обработчики
     tabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        showTab(tab.dataset.tab);
+      tab.addEventListener("click", function (e) {
+        e.preventDefault();
+        var tabName = tab.getAttribute("data-tab");
+        if (tabName) {
+          showTab(tabName);
+        }
       });
     });
 
-    showTab("desc");
+    // Показываем активную вкладку при загрузке
+    var activeTab = tabs.find(function (tab) {
+      return tab.classList.contains("active");
+    });
+
+    if (activeTab) {
+      var activeTabName = activeTab.getAttribute("data-tab");
+      if (activeTabName) {
+        showTab(activeTabName);
+      }
+    } else if (tabs.length > 0) {
+      var firstTabName = tabs[0].getAttribute("data-tab");
+      if (firstTabName) {
+        showTab(firstTabName);
+      }
+    }
   }
 
-  window.AMA.seriesPage = {
-    init: initSeriesPage,
-  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSeriesPage);
+  } else {
+    initSeriesPage();
+  }
 })();

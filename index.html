@@ -51,12 +51,12 @@
 </div>
 <nav aria-label="Навигация" class="navlinks">
 <div class="navItems">
-<a href="#about">О компании</a>
-<a href="#portfolio">Серии</a>
+<a href="./index.html">О компании</a>
+<a href="./pages/seriesPage.html">Серии</a>
 <a href="./pages/serviceInfo.html">Сервис</a>
 <a href="./pages/requestTitle.html">Запрос</a>
 <a href="./pages/contact.html">Контакты</a>
-<a href="supportPage/support.html">Поддержка</a></div>
+<a href="./supportPage/support.html">Поддержка</a></div>
 <div class="cta">
 <a class="btn" download="" href="docs/catalog.pdf">Скачать каталог</a>
 <a class="btn primary" href="#request">Подобрать насос</a>
@@ -195,27 +195,7 @@
 </div>
 </div>
 </section>
-<section aria-labelledby="portfolioTitle" id="portfolio">
-<div class="wrap">
-<div class="h2">
-<div>
-<h2 id="portfolioTitle">Серии</h2>
-<p>Фильтры по типу.</p>
-</div>
-<span class="badge">галерея</span>
-</div>
-<div class="searchRow">
-<div class="searchWrap">
-<label class="visually-hidden" for="seriesSearch">Поиск по сериям</label>
-<input class="search" id="seriesSearch" placeholder="Поиск по сериям (например, AMF, IHZ, ZFT)" type="search"/>
-<button aria-label="Очистить поиск" class="btn icon small" id="clearSearch" title="Очистить поиск" type="button">×</button>
-</div>
-<div class="hint">Можно искать по названию, типу или материалу.</div>
-</div>
-<div class="filters" id="filters"></div>
-<div aria-live="polite" class="grid" id="seriesGrid"></div>
-</div>
-</section>
+</main>
 <footer>
 <div class="wrap u-footer-wrap">
 <div>© <span id="year"></span> AMA — насосы нового поколения</div>
@@ -225,7 +205,6 @@
 <a class="btn" href="supportPage/support.html">Поддержка</a></nav>
 </div>
 </footer>
-</main>
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -263,24 +242,22 @@
 </div>
 </div>
 
-<div aria-hidden="true" class="drawer" id="drawer">
-<div class="panel">
-<div class="u-flex-between-center-gap-10">
-<strong class="u-text-strong-wide">Меню</strong>
-<button aria-label="Закрыть меню" class="btn icon" id="closeMenu" type="button">×</button>
-</div>
-<a class="mLink" href="#about">О компании</a>
-<a class="mLink" href="#portfolio">Серии</a>
-<a class="mLink" href="#limits">Ограничения</a>
-<a class="mLink" href="#service">Сервис</a>
-<a class="mLink" href="#request">Запрос</a>
-<a class="mLink" href="#contacts">Контакты</a>
-<a class="mLink" href="supportPage/support.html">Поддержка</a>
-<div class="u-stack-auto-gap-10">
-<a class="btn" download="" href="docs/catalog.pdf">Скачать каталог</a>
-<a class="btn primary mLink" href="#request">Подобрать насос</a>
-</div>
-</div>
-</div>
+  <!-- Мобильное меню drawer (ДОБАВЛЕНО ДЛЯ РАБОТЫ МЕНЮ) -->
+  <div aria-hidden="true" class="drawer" id="drawer">
+    <div class="panel">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <strong>Навигация</strong>
+        <button aria-label="Закрыть меню" class="btn" id="closeMenu" type="button">Закрыть</button>
+      </div>
+<a href="./index.html">О компании</a>
+<a href="./pages/seriesPage.html">Серии</a>
+<a href="./pages/serviceInfo.html">Сервис и ограничения</a>
+<a href="./pages/requestTitle.html">Запрос</a>
+<a href="./pages/contact.html">Контакты</a>
+<a href="./supportPage/support.html">Поддержка</a></div>
+    </div>
+  </div>
+  <button aria-label="Открыть меню" class="navBubble" id="navBubble" type="button">☰</button>
+  <button aria-label="Наверх" class="upBubble" id="upBubble" type="button">↑</button>
 </body>
 </html>
