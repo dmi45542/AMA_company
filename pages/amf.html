@@ -23,20 +23,40 @@
 <link href="../main.css" rel="stylesheet"/>
 </head>
 <body class="page-series">
-<header class="topbar">
-<div class="wrap wrap--narrow">
+<header class="topbar site-header">
+<div class="wrap">
 <div class="nav">
-<a class="brand" href="../index.html">
-          AMA
-          <small>насосы нового поколения</small>
+<div class="navRow navRow1">
+<a aria-label="AMA" class="brand" href="#top">
+<span class="brandText">AMA</span>
+<span class="brandSub">насосы нового поколения</span>
 </a>
-<div class="series-toolbar">
-<a class="btn" href="../index.html#portfolio">← К сериям</a>
-<button aria-label="Переключить тему" class="btn icon" data-theme-toggle="" id="themeBtn" title="Переключить тему" type="button">
-<span data-theme-icon="">☾</span>
+<div class="tools">
+<button aria-label="Переключить тему" class="btn icon theme-toggle" data-theme-toggle="" id="themeToggle" title="Переключить тему" type="button">
+<svg aria-hidden="true" class="ticon sun" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="4"></circle>
+<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+</svg>
+<svg aria-hidden="true" class="ticon moon" viewbox="0 0 24 24">
+<path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z"></path>
+</svg>
 </button>
-<a class="btn primary" href="#" id="mailBtn">Запрос</a>
+<button aria-label="Открыть меню" class="btn hamb" id="openMenu" type="button">Меню</button>
 </div>
+</div>
+<nav aria-label="Навигация" class="navlinks">
+<div class="navItems">
+<a href="../index.html">О компании</a>
+<a href="#portfolio">Серии</a>
+<a href="../pages/serviceInfo.html">Сервис</a>
+<a href="../pages/requestTitle.html">Запрос</a>
+<a href="../pages/contact.html">Контакты</a>
+<a href="supportPage/support.html">Поддержка</a></div>
+<div class="cta">
+<a class="btn" download="" href="docs/catalog.pdf">Скачать каталог</a>
+<a class="btn primary" href="#request">Подобрать насос</a>
+</div>
+</nav>
 </div>
 </div>
 </header>
@@ -71,6 +91,15 @@
 </section>
 <footer class="series-footer">© 2026 AMA</footer>
 </div>
+<footer>
+<div class="wrap u-footer-wrap">
+<div>© <span id="year"></span> AMA — насосы нового поколения</div>
+<nav aria-label="Навигация в подвале" class="u-row-gap-wrap">
+<a class="btn" href="#top">Наверх</a>
+<a class="btn" href="#request">Запрос</a>
+<a class="btn" href="supportPage/support.html">Поддержка</a></nav>
+</div>
+</footer>
 </main>
 <button aria-label="Наверх" class="upBubble" id="upBubble" type="button">↑</button>
 </body>
