@@ -65,34 +65,34 @@
       });
     }
 
-    function createCard(item) {
-      var metaItems = (item.meta || []).map(function (meta) {
-        return '<span class="meta">' + meta + '</span>';
-      }).join("");
+function createCard(item) {
+  var metaItems = (item.meta || []).map(function (meta) {
+    return '<span class="meta">' + meta + '</span>';
+  }).join("");
 
-      return (
-        '<article class="pCard" tabindex="0" data-series="' + item.name + '">' +
-          '<div class="thumbWrap">' +
-            '<img class="thumb" src="' + item.img + '" alt="Серия ' + item.name + '" loading="lazy">' +
+  return (
+    '<article class="pCard" tabindex="0" data-series="' + item.name + '">' +
+      '<div class="thumbWrap">' +
+        '<img class="thumb" src="' + item.img + '" alt="Серия ' + item.name + '" loading="lazy">' +
+      '</div>' +
+      '<div class="pBody">' +
+        '<div class="pTop">' +
+          '<div>' +
+            '<h3>' + item.name + '</h3>' +
+            '<div class="pTag">' + (item.tag || "") + '</div>' +
           '</div>' +
-          '<div class="pBody">' +
-            '<div class="pTop">' +
-              '<div>' +
-                '<h3>' + item.name + '</h3>' +
-                '<div class="pTag">' + (item.tag || "") + '</div>' +
-              '</div>' +
-              '<span class="badge">' + item.group + '</span>' +
-            '</div>' +
-            '<p class="pText">' + (item.desc || "") + '</p>' +
-            '<div class="pMeta">' + metaItems + '</div>' +
-            '<div class="pActions">' +
-              '<a class="btn" href="' + item.page + '">Подробнее</a>' +
-              '<button class="btn primary" type="button" data-request="1">Запросить</button>' +
-            '</div>' +
-          '</div>' +
-        '</article>'
-      );
-    }
+          '<span class="badge">' + item.group + '</span>' +
+        '</div>' +
+        '<p class="pText">' + (item.desc || "") + '</p>' +
+        '<div class="pMeta">' + metaItems + '</div>' +
+        '<div class="pActions">' +
+          '<a class="btn" href="' + item.page + '">Подробнее</a>' +
+          '<a class="btn primary" href="../pages/requestTitle.html?series=' + encodeURIComponent(item.name) + '">Запросить</a>' +
+        '</div>' +
+      '</div>' +
+    '</article>'
+  );
+}
 
     function renderGrid() {
       if (!gridElement) {

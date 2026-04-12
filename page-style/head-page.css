@@ -1,14 +1,10 @@
 /* Стили главной страницы */
 
 :root {
-  --bg:#1f2022;
-  --bg2:#141517;
-  --card:#222427;
-  --card2:#26282c;
   --text: rgba(236,239,244,.90);
   --heroTitle: rgba(244,246,249,.92);
   --btnText: rgba(236,239,244,.92);
-  --muted: rgba(173,183,198,.92);
+  --muted: rgba(173,1   83,198,.92);
   --line:rgba(255,255,255,.10);
   --red:#BF2233;
   --blue:#2E7DF6;
@@ -30,9 +26,9 @@ body {
   font-size: 16.5px;
   line-height: 1.55;
   color:var(--text);
-  background: linear-gradient(180deg, var(--bg), var(--bg2));
   overflow-x:hidden;
   position:relative;
+  background: var(--bg);
 }
 
 a {
@@ -208,7 +204,7 @@ html[data-theme="light"] .navlinks a.active {
   right:0;
   height:100%;
   width:min(420px, 92vw);
-  background: linear-gradient(180deg, rgba(34,36,39,.98), rgba(20,21,23,.98));
+  background: #222427;
   border-left: 1px solid rgba(255,255,255,.10);
   padding:18px;
   display:flex;
@@ -281,7 +277,7 @@ h1 {
   }
 }
 .card {
-  background: linear-gradient(180deg, rgba(38,40,44,.78), rgba(34,36,39,.78));
+  background: #222427;
   border: 1px solid rgba(255,255,255,.10);
   border-radius: var(--radius2);
   box-shadow: var(--shadow);
@@ -450,7 +446,7 @@ h1 {
 .pCard {
   border-radius: 22px;
   border:1px solid rgba(255,255,255,.10);
-  background: linear-gradient(180deg, rgba(38,40,44,.75), rgba(34,36,39,.75));
+  background: #222427;
   padding: 16px;
   position:relative;
   overflow:hidden;
@@ -668,12 +664,14 @@ textarea {
     grid-template-columns:1fr;
   }
 }
+
 footer {
   padding: 28px 0 44px;
   border-top: 1px solid rgba(255,255,255,.08);
   color: rgba(185,192,204,.9);
   font-size: 12px;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .btn:hover, .pill:hover {
     transform:none;
@@ -816,21 +814,17 @@ html[data-theme="light"] .logo-dark {
 }
 /* ===== Light theme overrides ===== */
     html[data-theme="light"] body {
-  /* Paper + engineering grid (AMA light) */
-  background: linear-gradient(180deg, #f7f3ec, #ffffff);
+  background: #f7f3ec;
   color: rgba(17,19,23,.96);
 }
+/* Удалён градиент сетки из body::before для светлой темы */
 html[data-theme="light"] body:before {
-  background-image:
-        linear-gradient(to right, rgba(46,125,246,.12) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(46,125,246,.08) 1px, transparent 1px);
-  opacity: .38;
-  mask-image: radial-gradient(950px 760px at 50% 0%, rgba(0,0,0,.75), transparent 70%);
+  display: none;
 }
 /* Paper cards + engineering look */
     html[data-theme="light"] .card,
     html[data-theme="light"] .pCard {
-  background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.78));
+  background: #ffffff;
   border: 1px solid rgba(0,0,0,.08);
   box-shadow: 0 18px 55px rgba(20,24,28,.12);
 }
@@ -950,7 +944,7 @@ html[data-theme="light"] .btn.primary {
   color: #fff;
 }
 html[data-theme="light"] .card {
-  background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(246,247,249,.94));
+  background: #ffffff;
   border: 1px solid rgba(0,0,0,.08);
   box-shadow: 0 14px 40px rgba(0,0,0,.10);
 }
@@ -1058,13 +1052,13 @@ html[data-theme="light"] input.search {
   margin: 72px auto;
   border-radius: 26px;
   border: 1px solid rgba(255,255,255,.12);
-  background: linear-gradient(180deg, rgba(38,40,44,.92), rgba(20,21,23,.92));
+  background: #222427;
   box-shadow: 0 24px 70px rgba(0,0,0,.55);
   overflow:hidden;
 }
 html[data-theme="light"] .modalPanel {
   border-color: rgba(0,0,0,.12);
-  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(250,250,250,.92));
+  background: #ffffff;
   box-shadow: 0 22px 60px rgba(0,0,0,.18);
 }
 .modalClose {
@@ -1224,7 +1218,7 @@ html[data-theme="light"] .btn.blue {
   border-color: rgba(46,125,246,.35) !important;
   box-shadow: 0 12px 30px rgba(46,125,246,.10) !important;
 }
-/* 3) Hide internal badges (AMA / серийность / mailto и т.д.) */
+/* 3) Hide internal badges */
     .badge {
   display:none !important;
 }
@@ -1262,8 +1256,7 @@ html[data-theme="dark"] .btn {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-/* Brand (logo removed for now;
-user will add later) */
+/* Brand (logo removed for now; user will add later) */
     .brand {
   flex-direction: column;
   align-items: flex-start;
@@ -1373,8 +1366,7 @@ html[data-theme="light"] .pText {
 html[data-theme="light"] .hint {
   color: rgba(17,19,23,.78);
 }
-/* Floating round navigation bubble (left) */
-    /* Floating round navigation bubble (left) */
+/* Floating round navigation bubble */
 .navBubble {
   position: fixed;
   right: 14px;
@@ -1422,34 +1414,12 @@ html[data-theme="light"] .navBubble:hover {
   border-color: rgba(191,34,51,.64);
   background: rgba(191,34,51,.13);
 }
-.navBubble.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-.navBubble:hover {
-  border-color: rgba(191,34,51,.62);
-  background: rgba(191,34,51,.16);
-}
-.navBubble:active {
-  transform: translateY(0) scale(.98);
-}
-html[data-theme="light"] .navBubble {
-  border-color: rgba(191,34,51,.45);
-  background: rgba(191,34,51,.09);
-  color: rgba(191,34,51,.98);
-  box-shadow: 0 18px 46px rgba(0,0,0,.12);
-}
-html[data-theme="light"] .navBubble:hover {
-  border-color: rgba(191,34,51,.64);
-  background: rgba(191,34,51,.13);
-}
 /* Drawer menu — light theme fixes */
     html[data-theme="light"] .drawer {
   background: rgba(0,0,0,.30);
 }
 html[data-theme="light"] .panel {
-  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,243,236,.98));
+  background: #ffffff;
   border-left-color: rgba(17,19,23,.10);
   color: rgba(17,19,23,.92);
 }
@@ -1486,28 +1456,6 @@ html[data-theme="light"] .panel a:hover {
   font-weight: 900;
   font-size: 18px;
   line-height: 1;
-}
-.upBubble.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-.upBubble:hover {
-  border-color: rgba(46,125,246,.58);
-  background: rgba(46,125,246,.12);
-}
-.upBubble:active {
-  transform: translateY(0) scale(.98);
-}
-html[data-theme="light"] .upBubble {
-  border-color: rgba(46,125,246,.36);
-  background: rgba(46,125,246,.07);
-  color: rgba(46,125,246,.98);
-  box-shadow: 0 18px 46px rgba(0,0,0,.10);
-}
-html[data-theme="light"] .upBubble:hover {
-  border-color: rgba(46,125,246,.58);
-  background: rgba(46,125,246,.10);
 }
 .upBubble.is-visible {
   opacity: 1;
@@ -1644,26 +1592,23 @@ html[data-theme="light"] .topbar {
 
 /* Кнопка меню (гамбургер) — видна всегда на телефонах и планшетах */
 .hamb {
-  display: none; /* скрыта на десктопе */
+  display: none;
 }
 
 .navBubble {
-  display: none; /* скрыта на десктопе */
+  display: none;
 }
 
 /* Планшеты и телефоны (до 980px) */
 @media (max-width: 980px) {
-  /* Скрываем обычную навигацию в хедере */
   .navlinks {
     display: none !important;
   }
   
-  /* Показываем кнопку-гамбургер в хедере */
   .hamb {
     display: inline-flex !important;
   }
   
-  /* Показываем плавающую кнопку меню (если нужна вторая) */
   .navBubble {
     display: flex !important;
     position: fixed;
@@ -1683,7 +1628,6 @@ html[data-theme="light"] .topbar {
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
   
-  /* Немного отступ сверху под хедер */
   .navBubble {
     top: calc(16px + env(safe-area-inset-top, 0px));
   }
