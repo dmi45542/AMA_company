@@ -1,6 +1,10 @@
 /* Стили главной страницы */
 
 :root {
+  --bg:#1f2022;
+  --bg2:#141517;
+  --card:#222427;
+  --card2:#26282c;
   --text: rgba(236,239,244,.90);
   --heroTitle: rgba(244,246,249,.92);
   --btnText: rgba(236,239,244,.92);
@@ -1639,3 +1643,4 @@ html[data-theme="light"] .topbar {
     display: none !important;
   }
 }
+

@@ -50,7 +50,6 @@
         <nav aria-label="Навигация" class="navlinks">
           <div class="navItems">
             <a href="./index.html">О компании</a>
-            <a href="./pages/seriesPage.html">Серии</a>
             <a href="./pages/serviceInfo.html">Сервис и ограничения</a>
             <a href="./pages/requestTitle.html">Запрос</a>
             <a href="./pages/contact.html">Контакты</a>
@@ -196,18 +195,28 @@
         </div>
       </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="wrap u-footer-wrap">
-      <div>© <span id="year"></span> AMA — насосы нового поколения</div>
-      <nav aria-label="Навигация в подвале" class="u-row-gap-wrap">
-        <a class="btn" href="#top">Наверх</a>
-        <a class="btn" href="./pages/requestTitle.html">Запрос</a>
-        <a class="btn" href="supportPage/support.html">Поддержка</a>
-      </nav>
-    </div>
-  </footer>
+    <section aria-labelledby="portfolioTitle" id="portfolio">
+      <div class="wrap">
+        <div class="h2">
+          <div>
+            <h2 id="portfolioTitle">Серии</h2>
+            <p>Фильтры по типу.</p>
+          </div>
+          <span class="badge">галерея</span>
+        </div>
+        <div class="searchRow">
+          <div class="searchWrap">
+            <label class="visually-hidden" for="seriesSearch">Поиск по сериям</label>
+            <input class="search" id="seriesSearch" placeholder="Поиск по сериям (например, AMF, IHZ, ZFT)" type="search" />
+            <button aria-label="Очистить поиск" class="btn icon small" id="clearSearch" title="Очистить поиск" type="button">×</button>
+          </div>
+          <div class="hint">Можно искать по названию, типу или материалу.</div>
+        </div>
+        <div class="filters" id="filters"></div>
+        <div aria-live="polite" class="grid" id="seriesGrid"></div>
+      </div>
+    </section>
 
   <script type="application/ld+json">
     {
@@ -220,6 +229,49 @@
       "description": "Химические насосы: герметичные магнитные, центробежные и самовсасывающие решения для агрессивных сред."
     }
   </script>
+</main>
+
+<footer>
+  <div class="wrap u-footer-wrap">
+    <div>
+      <p>© AMA — насосы нового поколения</p>
+      <p class="footer-title">Контакты</p>
+      <ul class="footer-contact-list">
+        <li class="contact-item">
+          <span class="contact-icon" aria-hidden="true">📞</span>
+          <a href="tel:+79999994242">+7 999 999 42 42</a>
+        </li>
+        <li class="contact-item">
+          <span class="contact-icon" aria-hidden="true">✉️</span>
+          <a href="mailto:dfewe@gmail.com">dfewe@gmail.com</a>
+        </li>
+        <li class="contact-item">
+          <span class="contact-icon" aria-hidden="true">💬</span>
+          <a href="https://t.me/ama_account">telegram account</a>
+        </li>
+        <li class="contact-item">
+          <span class="contact-icon" aria-hidden="true">👥</span>
+          <a href="https://t.me/ama_group">telegram group</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-title">Сайт</p>
+      <ul class="footer-links">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Разработчик</a></li>
+        <li><a href="#">Telegram</a></li>
+      </ul>
+    </div>
+
+    <nav aria-label="Навигация в подвале" class="u-row-gap-wrap">
+      <a class="btn" href="#top">Наверх</a>
+      <a class="btn" href="./pages/requestTitle.html">Запрос</a>
+      <a class="btn" href="supportPage/support.html">Поддержка</a>
+    </nav>
+  </div>
+</footer>
 
   <!-- Series modal -->
   <div aria-hidden="true" class="modal" id="seriesModal">
@@ -255,7 +307,6 @@
         <button aria-label="Закрыть меню" class="btn" id="closeMenu" type="button">Закрыть</button>
       </div>
       <a href="./index.html">О компании</a>
-      <a href="./pages/seriesPage.html">Серии</a>
       <a href="./pages/serviceInfo.html">Сервис и ограничения</a>
       <a href="./pages/requestTitle.html">Запрос</a>
       <a href="./pages/contact.html">Контакты</a>

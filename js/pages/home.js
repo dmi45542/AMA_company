@@ -87,7 +87,7 @@ function createCard(item) {
         '<div class="pMeta">' + metaItems + '</div>' +
         '<div class="pActions">' +
           '<a class="btn" href="' + item.page + '">Подробнее</a>' +
-          '<a class="btn primary" href="../pages/requestTitle.html?series=' + encodeURIComponent(item.name) + '">Запросить</a>' +
+          '<a class="btn primary" href="./pages/requestTitle.html?series=' + encodeURIComponent(item.name) + '">Запросить</a>' +
         '</div>' +
       '</div>' +
     '</article>'

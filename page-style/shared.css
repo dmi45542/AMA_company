@@ -166,10 +166,222 @@ body::before {
   color: rgba(46, 125, 246, 0.95);
 }
 
+/* ============================================
+   ФУТЕР (FOOTER) — ВСЕ СТИЛИ ЗДЕСЬ
+   ============================================ */
+
+/* Обёртка футера */
 .u-footer-wrap {
   display: flex;
   justify-content: space-between;
   gap: 14px;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.u-footer-wrap img {
+  width: 24px;
+  height: 24px;
+}
+
+.u-footer-wrap li {
+  list-style: none;
+  margin-left: -40px;
+  margin-top: 5px;
+}
+
+/* Основные стили футера */
+footer {
+  padding: 28px 0 44px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(185, 192, 204, 0.9);
+  font-size: 12px;
+  margin-top: 100px;
+  background-color: rgb(13, 13, 13);
+}
+
+.footer-title {
+  margin-top: 10px;
+  font-weight: 700;
+}
+ 
+/* Светлая тема для футера */
+html[data-theme="light"] footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: rgba(60, 68, 82, 0.9);
+  background-color: rgb(245, 245, 245);
+}
+
+/* Колонки футера */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Заголовки колонок */
+.col-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+html[data-theme="light"] .col-title {
+  color: rgba(17, 19, 23, 0.9);
+}
+
+/* Контент внутри колонок */
+.content_footer,
+.instruments-content,
+.community-content,
+.shapter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Списки в футере */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--blue);
+}
+
+html[data-theme="light"] .footer-col a:hover {
+  color: #1a5bc4;
+}
+
+/* Контактные строки (иконка + текст) */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.contact-row img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Кнопка "Перейти к заданиям" (если используется) */
+.button_ex {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  margin: 15px 0;
+  display: inline-block;
+}
+
+.button_ex a {
+  color: white;
+  text-decoration: none;
+}
+
+.button_ex:hover {
+  background-color: #1a5bc4;
+}
+
+/* Версия */
+.version {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+/* Нижняя часть футера (copyright) */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 11px;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme="light"] .footer-bottom {
+  border-top-color: rgba(0, 0, 0, 0.06);
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+.footer-bottom a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: var(--blue);
+}
+
+/* Разделительная линия */
+.end_line_three {
+  background-color: var(--muted);
+  opacity: 0.3;
+  margin: 30px 0 20px;
+  height: 1px;
+  border: none;
+}
+
+/* Адаптив для футера */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 0 30px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-col {
+    min-width: 100%;
+  }
+
+  .u-footer-wrap {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .u-footer-wrap .u-row-gap-wrap {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    margin-top: 24px;
+    padding-top: 16px;
+  }
 }
