@@ -385,7 +385,7 @@ h1 {
   background: rgba(255,255,255,.03);
   font-size: 12px;
   color: rgba(242,244,247,.92);
-  white-space:nowrap;
+  white-space: normal;
 }
 .chip b {
   color: var(--btnText);
@@ -1644,3 +1644,22 @@ html[data-theme="light"] .topbar {
   }
 }
 
+/* Для маленьких экранов */
+@media (max-width: 560px) {
+  .chip {
+    font-size: 10px;      /* меньше текст */
+    padding: 6px 10px;    /* меньше отступы */
+    gap: 6px;             /* меньше промежуток */
+  }
+  
+  .artRow {
+    gap: 8px;             /* меньше промежуток между чипами */
+  }
+}
+
+/* Для очень узких экранов */
+@media (max-width: 420px) {
+  .chip {
+    text-align: center;
+  }
+}
